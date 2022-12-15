@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated glot_webapplication -->
+      <package
+            uri="https://glot_webapplication.model"
+            class="glot_webapplication.Glot_webapplicationPackage"
+            genModel="glot_webapplication.genmodel"/>
+   </extension>
+
+</plugin>

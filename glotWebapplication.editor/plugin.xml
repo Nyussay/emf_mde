@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated glot_webapplication -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="glot_webapplication.presentation.Glot_webapplicationModelWizardID"
+            name="%_UI_Glot_webapplicationModelWizard_label"
+            class="glot_webapplication.presentation.Glot_webapplicationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Glot_webapplicationModelFile.gif">
+         <description>%_UI_Glot_webapplicationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated glot_webapplication -->
+      <editor
+            id="glot_webapplication.presentation.Glot_webapplicationEditorID"
+            name="%_UI_Glot_webapplicationEditor_label"
+            icon="icons/full/obj16/Glot_webapplicationModelFile.gif"
+            extensions="glot_webapplication"
+            class="glot_webapplication.presentation.Glot_webapplicationEditor"
+            contributorClass="glot_webapplication.presentation.Glot_webapplicationActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,61 @@
+@namespace(uri="https://glot_webapplication.model", prefix="glot_webapplication")
+package glot_webapplication;
+
+class Webapplication extends NamedElement {
+	val Page pages;
+}
+
+class Page extends NamedElement {
+	val Content[*] contents;
+}
+
+class Content extends NamedElement {
+	val Entity[*] entity;
+	val Links[*] links;
+	!ordered val Form[*] forms;
+}
+
+class Attribute extends NamedElement {
+	attr DataType type;
+	attr boolean[1] isprimarykey;
+}
+
+class Entity extends NamedElement {
+	val Attribute[*] attributes;
+	val References references;
+}
+
+class Element extends NamedElement {
+	attr String label;
+	attr String tooltips;
+}
+
+class Form extends NamedElement {
+	attr MethodType methodtype;
+	val Element[*] elements;
+}
+
+class NamedElement {
+	attr String name;
+}
+
+enum DataType {
+	string = 0;
+	boolean = 0;
+	int = 0;
+	date = 0;
+}
+
+class References extends NamedElement {
+	val Attribute attributes;
+}
+
+enum MethodType {
+	POST = 0;
+	GET = 0;
+}
+
+class Links extends NamedElement {
+	ref Attribute[1] attributelink;
+}
+

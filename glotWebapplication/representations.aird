@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_w2DrEHuxEe2Zuc3GM5RaMQ" version="15.0.0.202209061200">
+  <semanticResources>glot_webapplication.ecore</semanticResources>
+  <semanticResources>Webapplication.xmi</semanticResources>
+  <semanticResources>glot_webapplication.genmodel</semanticResources>
+  <semanticResources>glot_webapplication.emf</semanticResources>
+</viewpoint:DAnalysis>
