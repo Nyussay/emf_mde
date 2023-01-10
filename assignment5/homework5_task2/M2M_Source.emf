@@ -1,0 +1,68 @@
+@namespace(uri="Source_model.model", prefix="sourcemodel")
+package Source;
+
+class System {
+	val Entity[*] entity;
+	val Content[*] content;
+	val Page[*] page;
+	val Form[*] forms;
+	val Element element;
+}
+
+class Page extends NamedElement {
+	val Dynconcept[*] dynconcept;
+}
+
+abstract class Content {
+	val Dynconcept[*] dynconcept;
+}
+
+class Dynconcept extends NamedElement {
+	val Entity[*] entity;
+}
+
+class Attribute extends NamedElement {
+	attr Data_type type;
+	attr boolean isPrimarykey;
+}
+
+class Attributelink {
+	val Attribute[1] attributelink;
+}
+
+class Entity extends NamedElement {
+	val Attribute[*] attribute;
+	!ordered val Reference[*] reference;
+}
+
+enum Data_type {
+	int = 1;
+	string = 2;
+	text = 3;
+	date = 4;
+	boolean = 5;
+}
+
+class Reference extends NamedElement {
+	val Entity[*] entity;
+	attr Data_type attribute;
+}
+
+class Element extends NamedElement {
+	attr String Tooltips;
+	attr String Labels;
+}
+
+class Form extends NamedElement {
+	attr Method_type methodtype;
+}
+
+enum Method_type {
+	POST = 1;
+	GET = 2;
+}
+
+class NamedElement {
+	attr String name;
+}
+

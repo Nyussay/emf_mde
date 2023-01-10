@@ -1,0 +1,81 @@
+@namespace(uri="Target_M2M.model", prefix="Target")
+package Targetmodel;
+
+class System {
+	val Page[*] page;
+	val Entity[*] entities;
+	val Form[*] form;
+	val Content[*] content;
+	val Element[*] element;
+}
+
+class Page extends NamedElement {
+	ref Content[*] content;
+	val DYNcontent[*] dyncontent;
+}
+
+abstract class Content {
+}
+
+class DYNcontent extends Content, NamedElement {
+	val Index[*] index;
+	val Individual[*] individual;
+}
+
+class Index extends DYNcontent {
+	val Entity[*] entity;
+}
+
+class Individual extends DYNcontent {
+	val Entity[*] entity;
+}
+
+class NamedElement {
+	attr String name;
+}
+
+class Attribute extends Feature, NamedElement {
+	attr Data_type type;
+	attr boolean PK;
+}
+
+class Attributelink {
+	ref Attribute[1] attributelink;
+}
+
+enum Data_type {
+	string = 1;
+	image = 2;
+	INT = 3;
+	Boolean = 4;
+	Video = 5;
+	Images = 6;
+}
+
+class Entity extends NamedElement {
+	val Attribute[*] attribute;
+	val Reference[*] reference;
+}
+
+abstract class Feature extends NamedElement {
+}
+
+class Reference extends Feature, NamedElement {
+	val Attribute[*] attribute;
+	val Feature[*] feature;
+}
+
+class Form extends NamedElement {
+	attr Method_type methodtype;
+}
+
+class Element extends NamedElement {
+	attr String label;
+	attr String Tooltips;
+}
+
+enum Method_type {
+	GET = 1;
+	POST = 2;
+}
+

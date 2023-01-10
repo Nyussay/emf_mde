@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Transformation_refactoring" nsURI="https://transformation_refactoring.model"
+    nsPrefix="transformation_refactoring">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedELement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebApplication" eSuperTypes="#//NamedELement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//content_concern/Page"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authourisation" upperBound="-2"
+        eType="#//Security_concern/Authorisation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Registrations" eType="#//Security_concern/Registration"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="language" upperBound="-1"
+        eType="#//Language_concern/Language" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Logins" eType="#//Security_concern/Logins"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Session" eType="#//Security_concern/session"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Translations" eType="#//Language_concern/Translation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regions" upperBound="-1"
+        eType="#//Language_concern/Region" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="content_concern" nsURI="https://transformation_refactoring.model/contentconcern"
+      nsPrefix="contentconcern">
+    <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Content" upperBound="-1"
+          eType="#//content_concern/Content" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Content" eSuperTypes="#//content_concern/Page #//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Dynamic_content" upperBound="-1"
+          eType="#//content_concern/Dynamic_content" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Dynamic_content" eSuperTypes="#//content_concern/Content #//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+          eType="#//Form_concern/Element" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entity" upperBound="-1"
+          eType="#//Data_concern/Entity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="forms" upperBound="-1"
+          eType="#//Form_concern/Form" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Data_concern" nsURI="https://transformation_refactoring.model/Dataconcern"
+      nsPrefix="Dataconcern">
+    <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="datatype" upperBound="-1"
+          eType="#//Data_concern/Datatype"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="PK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Date_type" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Datatype">
+      <eLiterals name="string"/>
+      <eLiterals name="integer"/>
+      <eLiterals name="Eboolean"/>
+      <eLiterals name="image"/>
+      <eLiterals name="video"/>
+      <eLiterals name="float"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reference" upperBound="-1"
+          eType="#//Data_concern/Reference" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+          eType="#//Data_concern/Attribute" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="#//NamedELement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//Data_concern/Feature #//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributelink" eType="#//Data_concern/Attributelink"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Attributelink" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attribute_ref" eType="#//Data_concern/Attributelink"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Message_type">
+      <eLiterals name="POST"/>
+      <eLiterals name="GET"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Form_concern" nsURI="https://transformation_refactoring.model/Formconcern"
+      nsPrefix="form_concern">
+    <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Tooltips" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Labels" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+          eType="#//Form_concern/Element" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="message_Type" upperBound="-1"
+          eType="#//Data_concern/Message_type"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Security_concern" nsURI="https://transformation_refactoring.model/securityconcern"
+      nsPrefix="Security_concern">
+    <eClassifiers xsi:type="ecore:EClass" name="Authorisation" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entitiy" upperBound="-1"
+          eType="#//Data_concern/Entity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="session" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="page" upperBound="-1"
+          eType="#//content_concern/Page" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Registration" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entity" upperBound="-1"
+          eType="#//Data_concern/Entity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Logins" eSuperTypes="#//NamedELement #//Security_concern/Authorisation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" upperBound="-2"
+          eType="#//Security_concern/Authorisation" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Language_concern" nsURI="https://transformation_refactoring.model/language_concern"
+      nsPrefix="languageconcern">
+    <eClassifiers xsi:type="ecore:EClass" name="Region" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="region" ordered="false"
+          upperBound="-1" transient="true">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Translation" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="language" upperBound="-1"
+          eType="#//Language_concern/Language"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Date_type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Language" eSuperTypes="#//NamedELement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="language_list" transient="true">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,79 @@
+rule Sourcemodel2Targetmodel
+
+	transform s :Sourcemodel!System
+	to t : Targetmodel!System{
+
+	t.content = s.content;
+	t.page ::= s.page;
+	t.entities = s.entity;
+	t.form = t.form;
+	t.element = t.element;
+	
+}
+
+
+rule page2page
+	transform t : Sourcemodel!Page
+	to d : Targetmodel!Page {
+
+	d.dyncontent = t.dynconcept;
+	
+
+}
+
+@lazy
+rule Dynconcept2Index
+	transform s : Sourcemodel!Dynconcept
+	to t : Targetmodel!Dyncontent {
+
+	t.Index = s.Entity;
+	t.Individual = s.Entity;
+
+}
+rule Entity2Index
+	transform s : Sourcemodel!Entity
+	to t : Targetmodel!Index {
+	
+	t.entity = s.attribute;
+	t.entity = s.reference;
+	
+	}
+	
+rule Entity2Individual
+	transform s : Sourcemodel!Entity
+	to t : Targetmodel!Individual {
+	t.entity = s.attribute;
+	t.entity = s.reference;
+	
+	}
+	
+rule Entity2Entity
+	transform s : Sourcemodel!Entity
+	to t : Targetmodel!Entity{
+	t.attribute = s.attribute;
+	t.reference = s.reference;
+	
+	}
+rule Reference2Reference
+	transform s : Sourcemodel!Reference
+	to t : Targetmodel!Reference{
+	t.entity = s.entity;
+	t.attribute = s.attribute;
+	
+	}
+	
+rule Attribute2Attribute
+	transform s : Sourcemodel!Attribute
+	to t : Targetmodel!Attribute{
+	t.type = s.type;
+	t.PK = s.isprimarykey;
+	
+	}
+	
+rule Element2Element
+	transform s : Sourcemodel!Element
+	to t : Targetmodel!Element{
+	t.Tooltips = s.Tooltips;
+	t.label = s.Labels;
+	
+	}

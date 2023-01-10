@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Target="Target_M2M.model" xmlns:sourcemodel="Source_model.model" xsi:schemaLocation="Target_M2M.model M2M_Target.ecore Source_model.model M2M_Source.ecore">
+  <Target:System>
+    <page>
+      <dyncontent xsi:type="sourcemodel:Dynconcept" name="Breakingnews">
+        <entity name="Sport">
+          <attribute name="Author" type="string"/>
+          <attribute name="ID" isPrimarykey="true"/>
+          <attribute name="Title" type="string"/>
+          <attribute name="Description" type="text"/>
+          <reference name="Title"/>
+        </entity>
+        <entity name="Entertainment">
+          <attribute name="Author" type="string"/>
+          <attribute name="ID" isPrimarykey="true"/>
+          <attribute name="Title" type="string"/>
+          <attribute name="Description" type="text"/>
+          <reference name="Title"/>
+        </entity>
+        <entity name="Technology">
+          <attribute name="Author" type="string"/>
+          <attribute name="ID" isPrimarykey="true"/>
+          <attribute name="Title" type="string"/>
+          <attribute name="Description" type="text"/>
+          <reference name="Title"/>
+        </entity>
+        <entity name="Agriculture">
+          <attribute name="Author" type="string"/>
+          <attribute name="ID" isPrimarykey="true"/>
+          <attribute name="Title" type="string"/>
+          <attribute name="Description" type="text"/>
+          <reference name="Title"/>
+        </entity>
+        <entity name="Business">
+          <attribute name="Author" type="string"/>
+          <attribute name="ID" isPrimarykey="true"/>
+          <attribute name="Title" type="string"/>
+          <attribute name="Description" type="text"/>
+          <reference name="Title"/>
+        </entity>
+      </dyncontent>
+    </page>
+  </Target:System>
+  <Target:Element label="Name" Tooltips="Get author's name"/>
+</xmi:XMI>

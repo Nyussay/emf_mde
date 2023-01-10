@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_fgjjQJC3Ee2FNfaJtQvCnQ" version="15.0.0.202209061200">
+  <semanticResources>homework5_task1/Refactoring.xmi</semanticResources>
+  <semanticResources>homework5_task1/transformation_refactoring.ecore</semanticResources>
+  <semanticResources>homework5_task2/M2M_Source.ecore</semanticResources>
+  <semanticResources>homework5_task2/M2M_Target.ecore</semanticResources>
+  <semanticResources>homework5_task2/Sourcemodel.xmi</semanticResources>
+  <semanticResources>homework5_task2/Targetmodel.xmi</semanticResources>
+</viewpoint:DAnalysis>
