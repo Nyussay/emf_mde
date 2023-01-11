@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module generate('https://it.disim.mde2223/webapplication.model')]
+
+[template public generateElement (awebapplication : webapplication)]
+[comment @main/]
+[file (awebapplication.name, true,'UTF-8')]
+The application name is [awebapplication.name/]
+
+[for (entity : Entity| self.entities)]
+CREATE Table [entity.name/] ( [for (attributes : Attribute | self.attributes) separator (', ')][entity.name/] [attributes.types/][/for]);
+[/for]
+[for (entity: Entity| self.entities)]
+SELECT [for (attributes : Attribute | self.attributes) separator (',')] [/for] FROM [entity.name/]    WHERE [attributes.name/]   IS PRIMARYKEY;
+[/for]
+
+[for (entity: Entity| self.entities)]
+SELECT NOT [for (attributes : Attribute | self.attributes) separator (',')] [/for] FROM [entity.name/]    WHERE [attributes.name/]   IS NOT PRIMARYKEY;
+[/for]
+ 
+[for (entity : Entity | self.entities)]
+[for(attributes : Attribute | self.attributes)]
+[attributes.name/]
+[/for]
+[/for]
+ 
+
+[/file]
+[/template]
+
+

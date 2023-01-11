@@ -1,0 +1,98 @@
+
+
+
+
+
+
+The application name is News
+
+CREATE Table Sports ( Sports string, Sports string, Sports string);
+CREATE Table Entertainment ( Entertainment string, Entertainment string, Entertainment string);
+CREATE Table Technology ( Technology string, Technology string, Technology string);
+CREATE Table Business ( Business string, Business string, Business string);
+SELECT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+
+SELECT NOT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT NOT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT NOT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT NOT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
+
+The application name is News
+
+CREATE Table Sports ( Sports string, Sports string, Sports string);
+CREATE Table Entertainment ( Entertainment string, Entertainment string, Entertainment string);
+CREATE Table Technology ( Technology string, Technology string, Technology string);
+CREATE Table Business ( Business string, Business string, Business string);
+SELECT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+
+SELECT NOT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
+
+The application name is News
+
+CREATE Table Sports ( Sports string, Sports string, Sports string);
+CREATE Table Entertainment ( Entertainment string, Entertainment string, Entertainment string);
+CREATE Table Technology ( Technology string, Technology string, Technology string);
+CREATE Table Business ( Business string, Business string, Business string);
+SELECT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+SELECT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS PRIMARYKEY;
+
+SELECT NOT  , ,  FROM Sports    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Entertainment    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Technology    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+SELECT NOT  , ,  FROM Business    WHERE AuthorDescriptionTitle   IS NOT PRIMARYKEY;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
