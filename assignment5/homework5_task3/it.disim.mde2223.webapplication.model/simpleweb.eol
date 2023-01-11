@@ -1,0 +1,54 @@
+
+
+
+/* set= unordered, unique
+	sequence =ordered, non-unqiue
+	orderedset = ordered, unique
+	bag = unordered, non-unique
+*/
+
+/*Entity.getAllofType().size().println();
+*/
+
+/*Attribute.getAllofType().size().println();
+
+
+var filtered : Sequence;
+
+for (entity in Entity.all){
+	if(entity.name.length().println < 4){  
+	filtered.add(entity);
+		//entity.name.println();
+	}
+
+}
+
+
+filtered.size().println;
+
+*/
+
+//Entity.all.select(a|a.name.length() = 5).size().println();
+
+//Entity.all.reject(a|a.name.length() >5).println();
+
+Entity.all.forAll(a|a.name.length() < 4).println();
+
+//Entity.all.collect (a|a.name).println();
+
+Entity.all.name.println();
+
+
+//Entity.all.flatten().println();
+
+
+/*for (entity in Entity.all){
+	entity.hasNext().println(action.name + ":");
+}
+
+operation Index hasNext() : Boolean{
+	return not self.indexes. isEmpty();
+	}
+
+*/  
+

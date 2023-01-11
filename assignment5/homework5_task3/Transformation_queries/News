@@ -1,0 +1,110 @@
+The application name is News
+CREATE Table Sports ( Author string, Description string, Title string);
+CREATE Table Entertainment ( Author string, Description string, Title string);
+CREATE Table Technology ( Author string, Description string, Title string);
+CREATE Table Business ( Author string, Description string, Title string);
+SELECT  , ,  FROM Sports;
+SELECT  , ,  FROM Entertainment;
+SELECT  , ,  FROM Technology;
+SELECT  , ,  FROM Business;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
+
+The application name is News
+
+
+
+CREATE Table Sports ( Author string, Description string, Title string);
+
+
+
+CREATE Table Entertainment ( Author string, Description string, Title string);
+
+
+
+CREATE Table Technology ( Author string, Description string, Title string);
+
+
+
+CREATE Table Business ( Author string, Description string, Title string);
+
+SELECT  , ,  FROM AuthorDescriptionTitle 
+	WHERE AuthorDescriptionTitle;
+
+SELECT  , ,  FROM AuthorDescriptionTitle 
+	WHERE AuthorDescriptionTitle;
+
+SELECT  , ,  FROM AuthorDescriptionTitle 
+	WHERE AuthorDescriptionTitle;
+
+SELECT  , ,  FROM AuthorDescriptionTitle 
+	WHERE AuthorDescriptionTitle;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
+
+The application name is News
+
+
+
+CREATE Table Sports ( Author string, Description string, Title string);
+
+
+
+CREATE Table Entertainment ( Author string, Description string, Title string);
+
+
+
+CREATE Table Technology ( Author string, Description string, Title string);
+
+
+
+CREATE Table Business ( Author string, Description string, Title string);
+
+SELECT  , ,  FROM AuthorDescriptionTitle WHERE AuthorDescriptionTitle IS PRIMARYKEY;
+
+SELECT  , ,  FROM AuthorDescriptionTitle WHERE AuthorDescriptionTitle IS PRIMARYKEY;
+
+SELECT  , ,  FROM AuthorDescriptionTitle WHERE AuthorDescriptionTitle IS PRIMARYKEY;
+
+SELECT  , ,  FROM AuthorDescriptionTitle WHERE AuthorDescriptionTitle IS PRIMARYKEY;
+ 
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+Author
+Description
+Title
+ 
+
